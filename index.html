@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<link>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banquetes del Recuerdo</title>
+<link rel="stylesheet" href="./styles.css">
+</link>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Banquetes del Recuerdo</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li> <!-- Nueva opción -->
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-carousel">
+            <div class="carousel-item active"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/comida.avif');">
+            </div>
+            <div class="carousel-item"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/comida1.jpg');">
+            </div>
+            <div class="carousel-item"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/comida2.jpg');">
+            </div>
+        </div>
+        <div class="container hero-content">
+            <h2>Honramos la memoria de sus seres queridos con un servicio cálido, discreto y de buen gusto.</h2>
+            <p>catering profesional para funerales, misas y reuniones familiares. Cuidamos cada detalle para ofrecerle un momento de paz y acompañamiento.</p>
+            <br>
+            <a href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20catering"
+                class="btn" target="_blank">Consultar por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-img" style="background-image: url('./img/servicio1.avif');"></div>
+                    <div class="servicio-content">
+                        <h3>Coffee Break Memorial</h3>
+                        <p>Café, pan dulce, bocadillos y atención cálida para misas o velorios.</p>
+                    </div>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-img" style="background-image: url('./img/servicio2.jpg');"></div>
+                    <div class="servicio-content">
+                        <h3>Banquete Familiar</h3>
+                        <p>Menú completo para reuniones posteriores al servicio, con opciones tradicionales o gourmet.</p>
+                    </div>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-img" style="background-image: url('./img/servicio3.jpg');"></div>
+                    <div class="servicio-content">
+                        <h3>Catering Integral</h3>
+                        <p>Coordinación completa de alimentos, bebidas y meseros durante el evento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección Nosotros -->
+    <section class="nosotros" id="nosotros">
+  <div class="container">
+    <h2 class="section-title">Sobre Nosotros</h2>
+    <div class="nosotros-content">
+      <div class="nosotros-text">
+        <h3>Servicio con respeto y calidez</h3>
+        <p>En <strong>Banquetes del Recuerdo</strong> acompañamos a las familias en momentos difíciles ofreciendo alimentos y atención con el cuidado que merecen. Nuestro compromiso es brindar un servicio discreto, ordenado y humano.</p>
+        <p>Nos encargamos de cada detalle para que usted y sus seres queridos puedan compartir un espacio de paz, sin preocupaciones. Creemos que la despedida también puede ser un acto de cariño.</p>
+      </div>
+      <div class="nosotros-image">
+        <img class="image-placeholder" src="./img/equipo.jpg">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Contacto -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Solicita tu Presupuesto</h2>
+            <div class="contacto-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="evento">Tipo de Evento</label>
+                        <input type="text" id="evento" name="evento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha del Evento</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Consulta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20catering"
+         class="whatsapp-float" target="_blank">
+        <img src="./img/Whatsapp.png"></img>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>Banquetes del Recuerdo &copy; 2025 - Todos los derechos reservados</p>
+            <div class="social-links">
+            </div>
+            <p>contacto@catering.com | Tel: </p>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
