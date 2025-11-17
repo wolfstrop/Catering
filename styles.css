@@ -18,6 +18,83 @@ body {
     padding: 0 20px;
 }
 
+/* Estilos para la notificación de 24 horas */
+.hours-badge {
+    position: absolute;
+    top: 50pt;
+    right: 50pt;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    transform: rotate(-15deg);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: pulse 2s infinite;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efecto de pulso sutil */
+@keyframes pulse {
+    0% {
+        transform: rotate(-15deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-15deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotate(-15deg) scale(1);
+    }
+}
+
+/* Ajustes para el header */
+header {
+    position: relative;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
 /* Header */
 header {
     background-color: #1E1E1E;
@@ -59,6 +136,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #FFD700;
 }
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -169,7 +247,7 @@ nav ul li a:hover {
 .servicio-content h3 {
     margin-bottom: 0.5rem;
     color: #8B4513;
-    
+
 }
 
 
@@ -252,7 +330,7 @@ nav ul li a:hover {
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -273,18 +351,6 @@ nav ul li a:hover {
 .valor-card p {
     color: #666;
     line-height: 1.6;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .nosotros-content {
-        flex-direction: column;
-    }
-    
-    
-    .image-placeholder {
-        height: 250px;
-    }
 }
 
 /* Contacto */
@@ -332,7 +398,7 @@ nav ul li a:hover {
 
 .submit-btn {
     background-color: #C7A56B;
-   color: #1E1E1E;
+    color: #1E1E1E;
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
@@ -365,9 +431,6 @@ nav ul li a:hover {
     text-decoration: none;
     border-style: double;
 }
-
-
-
 
 .whatsapp-float:hover {
     background-color: #128C7E;
@@ -404,6 +467,82 @@ footer {
     text-decoration: none;
 }
 
+/* Estilos para el modal de privacidad */
+.privacy-link {
+    color: #C7A56B;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.privacy-link:hover {
+    color: #FFD700;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #f8f5f0;
+    margin: 5% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #8B4513;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #654321;
+}
+
+.modal h2 {
+    color: #8B4513;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal h3 {
+    color: #8B4513;
+    margin: 20px 0 10px;
+}
+
+.modal p, .modal ul {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.modal ul {
+    padding-left: 20px;
+}
+
+.modal li {
+    margin-bottom: 8px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .header-content {
@@ -422,5 +561,25 @@ footer {
     .hero p {
         font-size: 1rem;
     }
-}
+    
+    .nosotros-content {
+        flex-direction: column;
+    }
 
+    .image-placeholder {
+        height: 250px;
+    }
+
+    .hours-badge {
+        position: static;
+        transform: rotate(0);
+        margin-top: 10px;
+        animation: none;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+}
