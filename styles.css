@@ -470,6 +470,7 @@ footer {
 /* Estilos para el modal de privacidad */
 .privacy-link {
     color: #C7A56B;
+    position: center;
     text-decoration: underline;
     cursor: pointer;
     transition: color 0.3s;
