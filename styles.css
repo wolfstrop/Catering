@@ -6,17 +6,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+html, body {
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden;
+    
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+
 
 /* Estilos para la notificación de 24 horas */
 .hours-badge {
@@ -35,20 +32,51 @@ body {
     animation: pulse 2s infinite;
     text-transform: uppercase;
     letter-spacing: 1px;
+
+}
+
+.hours-2nd {
+    position: absolute;
+    border-radius: 3px;
+    position: center;
+    background-color: #e74c3c;
+    color: white;
+    letter-spacing: 1px;
+    animation: pulse2 2s infinite;
 }
 
 /* Efecto de pulso sutil */
 @keyframes pulse {
     0% {
         transform: rotate(-15deg) scale(1);
+        background-color: #d32f2f;
     }
 
     50% {
         transform: rotate(-15deg) scale(1.05);
+        background-color: #f9a825;
     }
 
     100% {
         transform: rotate(-15deg) scale(1);
+        background-color: #388e3c;
+    }
+}
+
+@keyframes pulse2 {
+    0% {
+        transform: scale(1);
+        background-color: #d32f2f;
+    }
+
+    50% {
+        transform: scale(1.05);
+        background-color: #f9a825;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: #388e3c;
     }
 }
 
@@ -68,8 +96,7 @@ header {
 }
 
 .header-content {
-    display: flex;
-    justify-content: space-between;
+
     align-items: center;
     position: relative;
 }
@@ -81,8 +108,13 @@ header {
 
 nav ul {
     display: flex;
-    list-style: none;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li {
+    margin-left: 0;
 }
 
 nav a {
@@ -568,19 +600,23 @@ footer {
     }
 
     .image-placeholder {
-        height: 250px;
+        width: 100%;
+        height: auto;
     }
 
     .hours-badge {
         position: static;
         transform: rotate(0);
         margin-top: 10px;
-        animation: none;
+        animation: pulse 2s infinite;
+
+    }
+    .hours-2nd {
+        position: static;
+        transform: rotate(0);
+        margin-top: 10px;
+        animation: pulse2 2s infinite;
+
     }
     
-    .modal-content {
-        width: 95%;
-        margin: 10% auto;
-        padding: 20px;
-    }
 }
