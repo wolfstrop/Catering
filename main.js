@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
 //funcion para opacity
 $(window).scroll(function() {
     if ( $(this).scrollTop() < 1 ) {
-        $("#navbar-ontop").addClass("bg-opacity-75");
-    } else {
         $("#navbar-ontop").removeClass("bg-opacity-75");
+    } else {
+        $("#navbar-ontop").addClass("bg-opacity-75");
     }
 });
 //funcion para navlinkgs cambiar hover
