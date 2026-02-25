@@ -61,7 +61,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
  */
+
+//iniciar AOS
+  AOS.init({disable: 'mobile'});
+
 //funcion para opacity
+
 $(window).scroll(function() {
     if ( $(this).scrollTop() < 1 ) {
         $("#navbar-ontop").removeClass("bg-opacity-75");
