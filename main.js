@@ -61,10 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
  */
-
+//funcion para opacity
+$(window).scroll(function() {
+    if ( $(this).scrollTop() < 1 ) {
+        $("#navbar-ontop").addClass("bg-opacity-75");
+    } else {
+        $("#navbar-ontop").removeClass("bg-opacity-75");
+    }
+});
+//funcion para navlinkgs cambiar hover
+$(".nav-item").on("mouseenter", function() {
+    $(this).find(".nav-link").removeClass("text-white").addClass("text-warning");
+});
+$(".nav-item").on("mouseleave", function() {
+    $(this).find(".nav-link").removeClass("text-warning").addClass("text-white");
+});
 
 // Carrusel automático para la sección Hero
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function (){
     const carouselItems = document.querySelectorAll('.carousel-item');
     let currentIndex = 0;
 
