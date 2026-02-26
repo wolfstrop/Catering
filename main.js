@@ -63,7 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 
 //iniciar AOS
-  AOS.init({disable: 'mobile'});
+  AOS.init({disable: 'mobile' , once: false,   // <- vuelve a animar cuando el elemento entra otra vez al viewport
+    mirror: true });
 
 //funcion para opacity
 
