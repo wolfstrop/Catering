@@ -40,39 +40,51 @@
 </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="hero-carousel">
-            <div class="carousel-item active"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/comida.jpg');">
-            </div>
-            <div class="carousel-item"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/comida1.jpg');">
-            </div>
-            <div class="carousel-item"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/comida2.jpg');">
-            </div>
-        </div>
-        <div class="container hero-content" data-aos="fade-down">
-            <h2>Honramos la memoria de sus seres queridos con un servicio cálido, discreto y de buen gusto.</h2>
-            <p>catering profesional para funerales, misas y reuniones familiares. Cuidamos cada detalle para ofrecerle
-                un momento de paz y acompañamiento.</p>
-            <br>
-            <!--boton -->
-           <div class="d-flex justify-content-center align-items-center">
-             <!-- From Uiverse.io by adamgiebl --> 
-            <a class="contactButton link-offset-2 link-underline link-underline-opacity-0" href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20catering" data-aos="fade-up" data-aos-delay="100">
-            Contactanos por whatsapp
-            <div class="iconButton">
-                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
-                </svg>
-            </div>
-             </a>
-           </div>
+<section class="hero position-relative overflow-hidden" id="inicio" style="min-height: 60vh;">
 
+    <!-- Carousel como fondo -->
+    <div id="carouselExampleAutoplaying" class="carousel slide position-absolute top-0 start-0 w-100 h-100" data-bs-ride="carousel" style="z-index: 0;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    </section>
+        <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+                <img src="img/comida.webp" class="d-block w-100 h-100" alt="..." style="object-fit: cover;">
+            </div>
+            <div class="carousel-item h-100">
+                <img src="img/comida1.webp" class="d-block w-100 h-100" alt="..." style="object-fit: cover;">
+            </div>
+            <div class="carousel-item h-100">
+                <img src="img/comida2.webp" class="d-block w-100 h-100" alt="..." style="object-fit: cover;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay oscuro -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.5); z-index: 1;"></div>
+
+    <!-- Contenido -->
+    <div class="container hero-content position-relative text-white" data-aos="fade-down" style="z-index: 2;">
+        <h2>Honramos la memoria de sus seres queridos con un servicio cálido, discreto y de buen gusto.</h2>
+        <p>catering profesional para funerales, misas y reuniones familiares. Cuidamos cada detalle para ofrecerle
+            un momento de paz y acompañamiento.</p>
+        <br>
+        <div class="d-flex justify-content-center align-items-center">
+            <a class="contactButton link-offset-2 link-underline link-underline-opacity-0" href="https://wa.me/1234567890?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20catering" data-aos="fade-up" data-aos-delay="100">
+                Contactanos por whatsapp
+                <div class="iconButton">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</section>
 
     <!-- Servicios -->
     <section class="servicios" id="servicios">
